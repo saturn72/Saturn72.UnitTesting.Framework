@@ -2,7 +2,7 @@
 
 set srcDir=src
 set slnName=%srcDir%\Saturn72.UnitTesting.Framework.sln
-set prjDir=%src%\Saturn72.UnitTesting.Framework
+set prjDir=%srcDir%\Saturn72.UnitTesting.Framework
 set prjName=%prjDir%\Saturn72.UnitTesting.Framework.csproj
   
 set config=%1
@@ -16,7 +16,7 @@ if not "%PackageVersion%" == "" (
 )
 
 REM Restore nuget packages
-set %pkgDir%=%cd%\%srcDir%\packages
+set pkgDir=%cd%\%srcDir%\packages
 echo restore nuget packages to %pkgDir% directory
 call %NuGet% restore %slnName% -OutputDirectory %pkgDir% -NonInteractive
 
