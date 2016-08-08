@@ -4,6 +4,8 @@ set slnDir=Saturn72.UnitTesting.Framework
 set slnName=%slnDir%\Saturn72.UnitTesting.Framework.sln
 set prjName=%slnDir%\Saturn72.UnitTesting.Framework.csproj
  
+ 
+ 
 set config=%1
 if "%config%" == "" (
    set config=Release
