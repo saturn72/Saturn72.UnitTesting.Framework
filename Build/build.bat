@@ -18,7 +18,7 @@ if not "%PackageVersion%" == "" (
 REM Restore nuget packages
 set %pkgDir%=%cd%\%srcDir%\packages
 echo restore nuget packages to %pkgDir% directory
-call %NuGet% restore %prjDir% -OutputDirectory %pkgDir% -NonInteractive
+call %NuGet% restore %slnName% -OutputDirectory %pkgDir% -NonInteractive
 
 REM Build
 echo Start building %slnName%
