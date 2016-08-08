@@ -1,0 +1,13 @@
+C:\dev\git\github_repos\Draft_Saturn72\src\Extensions\Saturn72.UnitTesting.Framework\bin\Debug\Saturn72.UnitTesting.Framework.dll
+C:\dev\git\github_repos\Draft_Saturn72\src\Extensions\Saturn72.UnitTesting.Framework\bin\Debug\Saturn72.UnitTesting.Framework.pdb
+C:\dev\git\github_repos\Draft_Saturn72\src\Extensions\Saturn72.UnitTesting.Framework\bin\Debug\nunit.framework.dll
+C:\dev\git\github_repos\Draft_Saturn72\src\Extensions\Saturn72.UnitTesting.Framework\bin\Debug\nunit.framework.xml
+C:\dev\git\github_repos\Draft_Saturn72\src\Extensions\Saturn72.UnitTesting.Framework\obj\Debug\Saturn72.UnitTesting.Framework.dll
+C:\dev\git\github_repos\Draft_Saturn72\src\Extensions\Saturn72.UnitTesting.Framework\obj\Debug\Saturn72.UnitTesting.Framework.pdb
+C:\dev\git\bitbucket_repos\Rhea\src\Extensions\Saturn72.UnitTesting.Framework\bin\Debug\Saturn72.UnitTesting.Framework.dll
+C:\dev\git\bitbucket_repos\Rhea\src\Extensions\Saturn72.UnitTesting.Framework\bin\Debug\Saturn72.UnitTesting.Framework.pdb
+C:\dev\git\bitbucket_repos\Rhea\src\Extensions\Saturn72.UnitTesting.Framework\bin\Debug\nunit.framework.dll
+C:\dev\git\bitbucket_repos\Rhea\src\Extensions\Saturn72.UnitTesting.Framework\bin\Debug\nunit.framework.xml
+C:\dev\git\bitbucket_repos\Rhea\src\Extensions\Saturn72.UnitTesting.Framework\obj\Debug\Saturn72.UnitTesting.Framework.csprojResolveAssemblyReference.cache
+C:\dev\git\bitbucket_repos\Rhea\src\Extensions\Saturn72.UnitTesting.Framework\obj\Debug\Saturn72.UnitTesting.Framework.dll
+C:\dev\git\bitbucket_repos\Rhea\src\Extensions\Saturn72.UnitTesting.Framework\obj\Debug\Saturn72.UnitTesting.Framework.pdb
