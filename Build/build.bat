@@ -16,7 +16,7 @@ if not "%PackageVersion%" == "" (
 )
 
 REM Restore nuget packages
-set %pkgDir% = %cd%\%srcDir%\packages
+set %pkgDir%=%cd%\%srcDir%\packages
 echo restore nuget packages to %pkgDir% directory
 call %NuGet% restore %prjDir% -OutputDirectory %pkgDir% -NonInteractive
 
