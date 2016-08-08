@@ -1,8 +1,9 @@
 @echo Off
 
 set slnDir=Saturn72.UnitTesting.Framework
-set slnName=%slnDir%\Saturn72.UnitTesting.Framework.sln
-set prjName=%slnDir%\Saturn72.UnitTesting.Framework.csproj
+set srcDir = src
+set slnName=%srcDir%\Saturn72.UnitTesting.Framework.sln
+set prjName=%src%\%slnDir%\Saturn72.UnitTesting.Framework.csproj
   
 set config=%1
 if "%config%" == "" (
@@ -15,7 +16,7 @@ if not "%PackageVersion%" == "" (
 )
 
 REM Restore nuget packages
-echo restore nuget packages to %cd%\packages directory
+echo restore nuget packages to %cd%\%srcDir%\packages directory
 call %NuGet% restore -OutputDirectory %cd%\packages -NonInteractive
 
 REM Build
