@@ -1,8 +1,8 @@
 @echo Off
 
-set slnDir = "Saturn72.UnitTesting.Framework"
-set slnName = "Saturn72.UnitTesting.Framework.sln"
-set prjName = "Saturn72.UnitTesting.Framework.csproj"
+set slnDir="Saturn72.UnitTesting.Framework"
+set slnName="Saturn72.UnitTesting.Framework.sln"
+set prjName="Saturn72.UnitTesting.Framework.csproj"
 
 set config=%1
 if "%config%" == "" (
