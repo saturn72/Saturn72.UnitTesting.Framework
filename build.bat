@@ -18,8 +18,10 @@ REM Restore nuget packages
 %NuGet% restore -OutputDirectory %cd%\packages -NonInteractive
 
 REM Build
-"%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" %slnName% /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+echo Start building %slnDir%\%slnName%
+"%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" %slnDir%\%slnName% /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
 
 REM Package
 mkdir Build
-call %nuget% pack "%slnDir%\%prjName%" -symbols -o Build -p Configuration=%config% %version%
+echo Packging %slnDir%"\"%prjName% project to Build directory
+call %nuget% pack %slnDir%"\"%prjName% -symbols -o Build -p Configuration=%config% %version%
