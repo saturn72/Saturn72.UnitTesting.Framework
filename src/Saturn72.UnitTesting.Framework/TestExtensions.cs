@@ -7,7 +7,6 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using NUnit.Framework.Internal;
 
 #endregion
 
@@ -139,7 +138,7 @@ namespace Saturn72.UnitTesting.Framework
             if (!string.Equals(actual, expected, StringComparison.InvariantCultureIgnoreCase))
             {
                 var message = string.Format("Expected {0} but was {1}", expected, actual);
-                throw new NUnitException(message);
+                throw new ArgumentException(message);
             }
         }
 
