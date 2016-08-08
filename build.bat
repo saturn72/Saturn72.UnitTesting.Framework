@@ -1,9 +1,11 @@
 @echo Off
 
-set slnDir="Saturn72.UnitTesting.Framework"
-set slnName="Saturn72.UnitTesting.Framework.sln"
-set prjName="Saturn72.UnitTesting.Framework.csproj"
-
+set slnDir=Saturn72.UnitTesting.Framework
+set slnName=%slnDir%\Saturn72.UnitTesting.Framework.sln
+set prjName=%slnDir%\Saturn72.UnitTesting.Framework.csproj
+ 
+ 
+ 
 set config=%1
 if "%config%" == "" (
    set config=Release
@@ -23,5 +25,5 @@ echo Start building %slnDir%\%slnName%
 
 REM Package
 mkdir Build
-echo Packging %slnDir%"\"%prjName% project to Build directory
-call %nuget% pack %slnDir%"\"%prjName% -symbols -o Build -p Configuration=%config% %version%
+echo Packging %slnDir%\%prjName% project to Build directory
+call %nuget% pack %slnDir%\%prjName% -symbols -o Build -p Configuration=%config% %version%
