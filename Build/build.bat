@@ -1,7 +1,7 @@
 @echo Off
 
 set slnDir=Saturn72.UnitTesting.Framework
-set srcDir = src
+set srcDir=src
 set slnName=%srcDir%\Saturn72.UnitTesting.Framework.sln
 set prjName=%src%\%slnDir%\Saturn72.UnitTesting.Framework.csproj
   
