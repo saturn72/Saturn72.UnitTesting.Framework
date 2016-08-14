@@ -14,7 +14,7 @@ set srcDir=src
 set slnName=%srcDir%\Saturn72.UnitTesting.Framework.sln
 set prjDir=%srcDir%\Saturn72.UnitTesting.Framework
 set prjName=%prjDir%\Saturn72.UnitTesting.Framework.csproj
-set testBin=Saturn72.UnitTesting.Framework.Tests\bin\%config%\Saturn72.UnitTesting.Framework.Tests.dll
+set testBin=%srcDir%\Saturn72.UnitTesting.Framework.Tests\bin\%config%\Saturn72.UnitTesting.Framework.Tests.dll
 set pkgDir=%cd%\%srcDir%packages
 
 
