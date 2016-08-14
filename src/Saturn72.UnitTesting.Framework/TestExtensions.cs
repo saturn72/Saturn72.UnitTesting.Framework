@@ -24,17 +24,6 @@ namespace Saturn72.UnitTesting.Framework
             Assert.True(b, message);
         }
 
-        public static void ShouldNotNull<T>(this T obj)
-        {
-            Assert.NotNull(obj);
-        }
-
-        public static void ShouldNotNull<T>(this T obj, string message)
-        {
-            var condition = obj != null;
-            Assert.True(condition, message);
-        }
-
         public static void ShouldNotBeNull<T>(this T obj)
         {
             Assert.NotNull(obj);

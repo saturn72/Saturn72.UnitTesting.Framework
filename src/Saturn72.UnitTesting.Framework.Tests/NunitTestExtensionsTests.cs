@@ -23,32 +23,24 @@ namespace Saturn72.UnitTesting.Framework.Tests
         }
 
         [Test]
-        public void ShouldNotNull()
-        {
-            "ttt".ShouldNotNull();
-        }
-
-        [Test]
-        public void ShouldNotNull_WithMessage()
-        {
-            "ttt".ShouldNotNull("message");
-        }
-
-        [Test]
         public void ShouldNotBeNull()
         {
+            new TestClass().ShouldNotBeNull();
             "rrr".ShouldNotBeNull();
         }
 
         [Test]
         public void ShouldNotBeNull_WithMessage()
         {
+            new TestClass().ShouldNotBeNull("message");
             "rrr".ShouldNotBeNull("message");
         }
 
         [Test]
         public void ShouldNotEqual()
         {
+            new TestClass().ShouldNotEqual(new TestClass());
+            1.ShouldNotEqual(0);
             "ttt".ShouldNotEqual("rrr");
         }
 
@@ -61,6 +53,9 @@ namespace Saturn72.UnitTesting.Framework.Tests
         [Test]
         public void ShouldEqual()
         {
+            var instance = new TestClass();
+            instance.ShouldEqual(instance);
+            1.ShouldEqual(1);
             "ttt".ShouldEqual("ttt");
         }
 
