@@ -26,12 +26,12 @@ namespace Saturn72.UnitTesting.Framework
 
         public static void ShouldNotNull<T>(this T obj)
         {
-            Assert.Null(obj);
+            Assert.NotNull(obj);
         }
 
         public static void ShouldNotNull<T>(this T obj, string message)
         {
-            var condition = obj == null;
+            var condition = obj != null;
             Assert.True(condition, message);
         }
 
@@ -48,13 +48,13 @@ namespace Saturn72.UnitTesting.Framework
 
         public static void ShouldNotEqual<T>(this T actual, object expected)
         {
-            Assert.AreEqual(expected, actual);
+            Assert.AreNotEqual(expected, actual);
         }
 
         public static void ShouldNotEqual<T>(this T actual, object expected, string message)
         {
             var result = expected.Equals(actual);
-            Assert.True(result, message);
+            Assert.False(result, message);
         }
 
         public static void ShouldEqual<T>(this T actual, object expected)
@@ -78,11 +78,11 @@ namespace Saturn72.UnitTesting.Framework
             return Assert.Throws(exceptionType, () => testCode());
         }
 
-        public static Exception ShouldBeThrownBy(this Type exceptionType, Action testCode, string message)
+        public static Exception ShouldBeThrownBy(this Type exceptionType, Action testCode, string exceptionMEssage)
         {
             var t = new Task(() => { });
             var exception = Assert.Throws(exceptionType, () => testCode());
-            Assert.AreEqual(message, exception.Message);
+            Assert.AreEqual(exceptionMEssage, exception.Message);
 
             return exception;
         }
@@ -163,7 +163,7 @@ namespace Saturn72.UnitTesting.Framework
             source.Count.ShouldEqual(expected);
         }
 
-        public static void PropertyValuesAreEquals<T>(this T actual, T expected, string[] execludeProperties)
+        public static void PropertyValuesAreEquals<TType>(this TType actual, TType expected, string[] execludeProperties)
         {
             var properties = expected.GetType().GetProperties();
             foreach (var property in properties)
