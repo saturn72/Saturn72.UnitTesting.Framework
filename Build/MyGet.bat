@@ -1,12 +1,5 @@
 @echo Off
 
-set srcDir=src
-set slnName=%srcDir%\Saturn72.UnitTesting.Framework.sln
-set prjDir=%srcDir%\Saturn72.UnitTesting.Framework
-set prjName=%prjDir%\Saturn72.UnitTesting.Framework.csproj
-set testBin=Saturn72.UnitTesting.Framework.Tests\bin\%config%\Saturn72.UnitTesting.Framework.Tests.dll
-set pkgDir=%cd%\%srcDir%packages
-
 set config=%1
 if "%config%" == "" (
    set config=Release
@@ -16,6 +9,15 @@ set version=
 if not "%PackageVersion%" == "" (
    set version=-Version %PackageVersion%
 )
+
+set srcDir=src
+set slnName=%srcDir%\Saturn72.UnitTesting.Framework.sln
+set prjDir=%srcDir%\Saturn72.UnitTesting.Framework
+set prjName=%prjDir%\Saturn72.UnitTesting.Framework.csproj
+set testBin=Saturn72.UnitTesting.Framework.Tests\bin\%config%\Saturn72.UnitTesting.Framework.Tests.dll
+set pkgDir=%cd%\%srcDir%packages
+
+
 
 REM Restore nuget packages
 set pkgDir=%cd%\%srcDir%\packages
