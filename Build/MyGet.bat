@@ -42,3 +42,6 @@ REM Package
 mkdir Build
 echo Packging %prjName% project to Build directory
 call %NuGet% pack %prjName% -symbols -o Build -p Configuration=%config% %version%
+
+echo push %prjName% directory content to nuget
+call %NuGet% push %prjName%
