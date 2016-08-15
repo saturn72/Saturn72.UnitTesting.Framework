@@ -44,5 +44,5 @@ mkdir Build
 echo Packging %prjName% project to Build directory
 call %NuGet% pack %prjName% -symbols -o Build -p Configuration=%config% %version%
 
-echo push %prjBinDir%*.dll directory content to nuget
-call %NuGet% push %prjDir%*.dll
+echo push %prjBinDir%* directory content to nuget
+call %NuGet% push %prjDir%*
