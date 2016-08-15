@@ -13,6 +13,7 @@ if not "%PackageVersion%" == "" (
 set srcDir=src
 set slnName=%srcDir%\Saturn72.UnitTesting.Framework.sln
 set prjDir=%srcDir%\Saturn72.UnitTesting.Framework
+set prjBinDir=%srcDir%\Saturn72.UnitTesting.Framework\bin\%config%\
 set prjName=%prjDir%\Saturn72.UnitTesting.Framework.csproj
 set testBin=%srcDir%\Saturn72.UnitTesting.Framework.Tests\bin\%config%\Saturn72.UnitTesting.Framework.Tests.dll
 set pkgDir=%cd%\%srcDir%packages
@@ -43,5 +44,5 @@ mkdir Build
 echo Packging %prjName% project to Build directory
 call %NuGet% pack %prjName% -symbols -o Build -p Configuration=%config% %version%
 
-echo push %prjName% directory content to nuget
-call %NuGet% push %prjName%
+echo push %prjBinDir%\*.dll directory content to nuget
+call %NuGet% push %prjDir%\*.dll
