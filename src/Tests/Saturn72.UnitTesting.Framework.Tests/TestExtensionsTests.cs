@@ -8,7 +8,7 @@ using NUnit.Framework;
 
 namespace Saturn72.UnitTesting.Framework.Tests
 {
-    public class NunitTestExtensionsTests
+    public class TestExtensionsTests
     {
         [Test]
         public void True()
