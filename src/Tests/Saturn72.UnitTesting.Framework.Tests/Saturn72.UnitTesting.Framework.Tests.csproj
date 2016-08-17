@@ -38,14 +38,14 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NunitTestExtensionsTests.cs" />
+    <Compile Include="TestExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Saturn72.UnitTesting.Framework\Saturn72.UnitTesting.Framework.csproj">
+    <ProjectReference Include="..\..\Saturn72.UnitTesting.Framework\Saturn72.UnitTesting.Framework.csproj">
       <Project>{5CBFC4C3-21AF-418B-AEA6-BE38877D0B91}</Project>
       <Name>Saturn72.UnitTesting.Framework</Name>
     </ProjectReference>
