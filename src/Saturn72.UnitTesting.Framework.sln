@@ -12,11 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{BA7BAA7C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1FF548E6-C9F1-4ADA-8507-057C168C27FB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{67A53384-4340-4BA9-B21B-916BD36E375A}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\packages.config = .nuget\packages.config
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saturn72.UnitTesting.Framework.Tests", "Tests\Saturn72.UnitTesting.Framework.Tests\Saturn72.UnitTesting.Framework.Tests.csproj", "{955294F5-700C-472D-853E-95FE34FB370F}"
 EndProject
 Global

@@ -74,14 +74,14 @@ namespace Saturn72.UnitTesting.Framework.Tests
         [Test]
         public void ShouldBeThrownBy()
         {
-            typeof (NullReferenceException).ShouldBeThrownBy(() => { throw new NullReferenceException(); }
+            typeof(NullReferenceException).ShouldBeThrownBy(() => { throw new NullReferenceException(); }
                 );
         }
 
         [Test]
         public void ShouldBeThrownBy_WithMessage()
         {
-            typeof (NullReferenceException).ShouldBeThrownBy(() => { throw new NullReferenceException(); }
+            typeof(NullReferenceException).ShouldBeThrownBy(() => { throw new NullReferenceException(); }
                 , "Object reference not set to an instance of an object.");
         }
 
@@ -175,20 +175,37 @@ namespace Saturn72.UnitTesting.Framework.Tests
         }
 
         [Test]
-        public void PropertyValuesAreEquals()
+        public void PropertyValuesAreEquals_AllProperties()
+        {
+            var instance1 = new TestClass
+            {
+                DecimalValue = 1,
+                StringValue = "T"
+            };
+
+            var instance2 = new TestClass
+            {
+                DecimalValue = 1,
+                StringValue = "T"
+            };
+            instance1.PropertyValuesAreEquals(instance2);
+        }
+
+        [Test]
+        public void PropertyValuesAreEquals_ExcludeProperties()
         {
             var instance1 = new TestClass
             {
                 DecimalValue = 1,
                 StringValue = "T",
-                ExcludedProp = "111",
+                ExcludedProp = "111"
             };
 
             var instance2 = new TestClass
             {
                 DecimalValue = 1,
                 StringValue = "T",
-                ExcludedProp = "eeecd",
+                ExcludedProp = "eeecd"
             };
             instance1.PropertyValuesAreEquals(instance2, new[] {"ExcludedProp"});
         }

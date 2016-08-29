@@ -152,12 +152,18 @@ namespace Saturn72.UnitTesting.Framework
             source.Count.ShouldEqual(expected);
         }
 
+        public static void PropertyValuesAreEquals<TType>(this TType actual, TType expected)
+
+        {
+            PropertyValuesAreEquals(actual, expected, new string[] {});
+        }
+
         public static void PropertyValuesAreEquals<TType>(this TType actual, TType expected, string[] execludeProperties)
         {
             var properties = expected.GetType().GetProperties();
             foreach (var property in properties)
             {
-                if(execludeProperties.Contains(property.Name, StringComparer.InvariantCultureIgnoreCase))
+                if (execludeProperties.Contains(property.Name, StringComparer.InvariantCultureIgnoreCase))
                     continue;
 
                 object expectedValue = property.GetValue(expected, null);
@@ -204,8 +210,9 @@ namespace Saturn72.UnitTesting.Framework
                     property.PropertyType.Name, property.Name, expectedList.Count, actualList.Count);
 
             for (int i = 0; i < actualList.Count; i++)
-                actualList[i].ShouldEqual(expectedList[i], 
-                        string.Format("Property {0}.{1} does not match. Expected IList with element {1} equals to {2} but was IList with element {1} equals to {3}",
+                actualList[i].ShouldEqual(expectedList[i],
+                    string.Format(
+                        "Property {0}.{1} does not match. Expected IList with element {1} equals to {2} but was IList with element {1} equals to {3}",
                         property.PropertyType.Name, property.Name, expectedList[i], actualList[i]));
         }
     }
