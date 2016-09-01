@@ -12,7 +12,7 @@ using NUnit.Framework;
 
 namespace Saturn72.UnitTesting.Framework
 {
-    public static class TestExtensions
+    public static partial class TestExtensions
     {
         public static void True(this bool b)
         {
