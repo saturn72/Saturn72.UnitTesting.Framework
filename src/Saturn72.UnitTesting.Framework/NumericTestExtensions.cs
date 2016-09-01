@@ -6,81 +6,60 @@ namespace Saturn72.UnitTesting.Framework
     public class NumericTestExtensions
     {
         [Test]
-        public void ShouldBeGreaterThan_Int()
+        public void ShouldBeGreaterThan()
         {
+            //int
             3.ShouldBeGreaterThan(2);
+
+            //long
+            long.MaxValue.ShouldBeGreaterThan(long.MaxValue - 1);
+
+            //decimal
+            decimal.MaxValue.ShouldBeGreaterThan(decimal.MaxValue - 1);
         }
 
         [Test]
         public void ShouldBeGreaterOrEqualTo_Int()
         {
+            //int
             3.ShouldBeGreaterOrEqualTo(3);
             3.ShouldBeGreaterOrEqualTo(2);
-        }
 
-        [Test]
-        public void ShouldBeSmallerThan_Int()
-        {
-            2.ShouldBeSmallerThan(3);
-        }
-
-        [Test]
-        public void ShouldBeSmallerOrEqualTo_Int()
-        {
-            3.ShouldBeSmallerOrEqualTo(3);
-            1.ShouldBeSmallerOrEqualTo(2);
-        }
-
-        [Test]
-        public void ShouldBeGreaterThan_Long()
-        {
-            long.MaxValue.ShouldBeGreaterThan(long.MaxValue-1);
-        }
-
-        [Test]
-        public void ShouldBeGreaterOrEqualTo_Long()
-        {
+            //long
             long.MaxValue.ShouldBeGreaterOrEqualTo(long.MaxValue);
             long.MaxValue.ShouldBeGreaterOrEqualTo(long.MinValue);
+
+            //decimal
+            decimal.MaxValue.ShouldBeGreaterOrEqualTo(decimal.MinValue);
+            decimal.MaxValue.ShouldBeGreaterOrEqualTo(decimal.MaxValue);
         }
 
         [Test]
-        public void ShouldBeSmallerThan_Long()
+        public void ShouldBeSmallerThan()
         {
-            long.MinValue.ShouldBeSmallerOrEqualTo(long.MaxValue);
+            //int
+            2.ShouldBeSmallerThan(3);
+            //long
+            long.MinValue.ShouldBeSmallerThan(long.MaxValue);
+
+            //decimal
+            decimal.MinValue.ShouldBeSmallerThan(decimal.MaxValue);
         }
 
         [Test]
-        public void ShouldBeSmallerOrEqualTo_Long()
+        public void ShouldBeSmallerOrEqualTo()
         {
+            //int
+            3.ShouldBeSmallerOrEqualTo(3);
+            1.ShouldBeSmallerOrEqualTo(2);
+
+            //long
             long.MinValue.ShouldBeSmallerOrEqualTo(long.MaxValue);
             long.MinValue.ShouldBeSmallerOrEqualTo(long.MinValue);
-        }
 
-        [Test]
-        public void ShouldBeGreaterThan_Decimal()
-        {
-            decimal.MaxValue.ShouldBeGreaterThan(decimal.MaxValue-1);
-        }
-
-        [Test]
-        public void ShouldBeGreaterOrEqualTo_Decimal()
-        {
-            decimal.MaxValue.ShouldBeGreaterOrEqualTo(decimal.MaxValue);
-            decimal.MaxValue.ShouldBeGreaterOrEqualTo(decimal.MinValue);
-        }
-
-        [Test]
-        public void ShouldBeSmallerThan_Decimal()
-        {
-            decimal.MinValue.ShouldBeSmallerOrEqualTo(decimal.MaxValue);
-        }
-
-        [Test]
-        public void ShouldBeSmallerOrEqualTo_Decimal()
-        {
-            decimal.MinValue.ShouldBeSmallerOrEqualTo(decimal.MaxValue);
+            //decimal
             decimal.MinValue.ShouldBeSmallerOrEqualTo(decimal.MinValue);
+            decimal.MinValue.ShouldBeSmallerOrEqualTo(decimal.MaxValue);
         }
     }
 }
