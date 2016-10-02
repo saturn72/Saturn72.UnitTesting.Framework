@@ -11,6 +11,56 @@ namespace Saturn72.UnitTesting.Framework.Tests
     public class TestExtensionsTests
     {
         [Test]
+        public void ShouldContain()
+        {
+            "this is string".ShouldContain("str");
+            "this is string".ShouldContain("str", "message");
+        }
+
+        [Test]
+        public void ShouldContain_Instances()
+        {
+            "this is string".ShouldContain("str", 1);
+            "this is string".ShouldContain("str", 1, "message");
+        }
+
+
+        [Test]
+        public void ShouldContainMax()
+        {
+            "this is string".ShouldContainMaximum("str", 2);
+            "this is string".ShouldContainMaximum("str", 2, "message");
+        }
+
+        [Test]
+        public void ShouldContainMin()
+        {
+            "this is string".ShouldContainMinimum("is", 2);
+            "this is string".ShouldContainMinimum("is", 2, "message");
+        }
+
+        [Test]
+        public void ShouldContainRange()
+        {
+            var message = "message";
+            "this is string".ShouldContainRange("is", 2, 6);
+            "this is string".ShouldContainRange("is", 2, 6, message);
+
+            "this is string that is beautiful".ShouldContainRange("is", 3, 6);
+            "this is string that is beautiful".ShouldContainRange("is", 3, 6, message);
+            "this is string that is beautiful is is ".ShouldContainRange("is", 4, 6);
+            "this is string that is beautiful is is ".ShouldContainRange("is", 4, 6, message);
+            "is is this is string that is beautiful is is ".ShouldContainRange("is", 5, 6);
+            "is is this is string that is beautiful is is ".ShouldContainRange("is", 5, 6, message);
+        }
+
+        [Test]
+        public void ShouldNotContain()
+        {
+            "this is string".ShouldNotContain("strsss");
+        }
+
+        [Test]
         public void True()
         {
             true.True();
