@@ -55,6 +55,19 @@ namespace Saturn72.UnitTesting.Framework.Tests
         }
 
         [Test]
+        public void ShouldNotEndWith()
+        {
+            "this is string".ShouldNotEndWith("strsss");
+        }
+
+        [Test]
+        public void ShouldNotEnd()
+        {
+            "this is string".ShouldEndWith("ing");
+        }
+
+
+        [Test]
         public void ShouldNotContain()
         {
             "this is string".ShouldNotContain("strsss");

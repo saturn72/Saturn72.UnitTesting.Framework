@@ -9,6 +9,29 @@ namespace Saturn72.UnitTesting.Framework
 {
     public static class Assertor
     {
+        public static void ShouldNotEndWith(this string source, string notClosingString)
+        {
+            var message = string.Format("The source string {0} ends with the string {1}",
+                source,
+                notClosingString);
+            ShouldNotEndWith(source, notClosingString, message);
+        }
+        public static void ShouldNotEndWith(this string source, string notClosingString, string message)
+        {
+            Assert.False(source.EndsWith(notClosingString), message);
+        }
+
+        public static void ShouldEndWith(this string source, string closingString)
+        {
+            var message = string.Format("The source string {0} does not end with the string {1}",
+                source,
+                closingString);
+            ShouldEndWith(source, closingString, message);
+        }
+        public static void ShouldEndWith(this string source, string closingString, string message)
+        {
+            Assert.True(source.EndsWith(closingString), message);
+        }
         public static void ShouldNotContain(this string source, string containedString)
         {
             var message = string.Format("The source string {0} should not contain any instance of the string {1}",
