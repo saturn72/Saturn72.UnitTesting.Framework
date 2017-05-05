@@ -36,6 +36,7 @@ call %Nuget% install NUnit.ConsoleRunner -OutputDirectory %pkgDir%
 
 echo run unit tests from %testBin%
 set nunitExe=%pkgDir%\NUnit.ConsoleRunner.3.6.1\tools\nunit3-console.exe
+echo using nunit runner from location %nunitExe%
 %nunitExe% /config:%config% %testBin%
 if not "%errorlevel%"=="0" goto failure
 
